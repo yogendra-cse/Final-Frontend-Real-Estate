@@ -27,7 +27,7 @@ function ProfileUpdatePage() {
         const userId = JSON.parse(localStorage.getItem("user")).id;
         console.log(userId);
         
-        const res = await apiRequest.put("/auth/update", {
+        const res = await apiRequest.put("/api/auth/update", {
             id: userId,  
             ...formData,
         });
